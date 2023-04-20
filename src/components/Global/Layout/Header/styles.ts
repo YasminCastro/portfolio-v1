@@ -1,3 +1,4 @@
+import { colors } from "@/styles/GlobalStyles";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
@@ -10,6 +11,7 @@ export const HeaderWrapper = styled.header`
 
   display: flex;
   align-items: center;
+  background: ${colors.black};
 `;
 
 export const HeaderContainer = styled.div`

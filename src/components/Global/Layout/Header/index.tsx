@@ -7,8 +7,8 @@ import {
   Icons,
   PageLinks,
 } from "./styles";
-import SocialMedia from "@/components/SocialMedia";
 import { HiTranslate } from "react-icons/hi";
+import SocialMedia from "../../SocialMedia";
 
 const Header = () => {
   return (

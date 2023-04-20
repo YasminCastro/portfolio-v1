@@ -106,4 +106,12 @@ export default createGlobalStyle`
   li, ul {
     list-style: none;  
   }
+
+  button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
 `;
