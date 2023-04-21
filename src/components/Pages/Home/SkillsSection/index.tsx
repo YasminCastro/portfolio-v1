@@ -124,8 +124,8 @@ const Skill = ({ title, experience, progress, logo }: any) => {
   let parsedExperience = diff.toFixed(1);
 
   return (
-    <SkillContainer>
-      <SkillInfo key={title}>
+    <SkillContainer key={title}>
+      <SkillInfo>
         {logo}
         <div>
           <p className="title">{title}</p>
