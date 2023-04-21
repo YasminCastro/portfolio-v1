@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HomeContainer, LeftInfo } from "./styles";
+import { ArrowDown, HomeContainer, LeftInfo } from "./styles";
 import { Button } from "@/components/Global";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 
@@ -19,7 +19,9 @@ const HomeSection: React.FC = () => {
         width={550}
         height={350}
       />
-      <MdOutlineKeyboardDoubleArrowDown />
+      <ArrowDown>
+        <MdOutlineKeyboardDoubleArrowDown size={30} />
+      </ArrowDown>
     </HomeContainer>
   );
 };
