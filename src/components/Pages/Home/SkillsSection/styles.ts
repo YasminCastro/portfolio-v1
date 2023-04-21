@@ -8,47 +8,59 @@ export const SkillsWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  border: 1px solid red;
 `;
 
 export const SkillsContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin-left: 100px;
+  margin: 0 50px;
 
   p {
     font-size: 20px;
   }
 
   h2 {
-    font-size: 98px;
+    font-size: 90px;
+    margin-bottom: 18px;
   }
 
-  .bubble-left {
-    /* Modify size here: */
-    --size: 50px;
-
-    position: relative;
-    width: var(--size);
-    height: calc(var(--size) * 0.66);
-    background: #333;
-    border-radius: 10px;
+  hr {
+    margin: 0 8px;
   }
 
-  .bubble-left:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border: calc(var(--size) * 0.13) solid transparent;
-    border-right-color: #333;
-    border-left: 0;
-    margin-top: calc(var(--size) * 0.13 * -1);
-    margin-left: calc(var(--size) * 0.13 * -1);
+  .mantine-Tabs-root {
+    height: 70%;
   }
 `;
 
-export const SkillContainer = styled.div``;
+export const SkillContainer = styled.div`
+  width: 200px;
+  padding: 10px;
+`;
+
+export const SkillsByCategories = styled.div`
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+`;
+
+export const SkillInfo = styled.div`
+  display: flex;
+  margin-bottom: 16px;
+  align-items: center;
+
+  gap: 24px;
+  .title {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .experience {
+    font-weight: 100;
+    font-size: 14px;
+    color: ${colors.gray800};
+  }
+`;

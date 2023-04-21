@@ -1,74 +1,27 @@
-import Image from "next/image";
-import { SkillsWrapper, SkillsContainer, SkillContainer } from "./styles";
+import {
+  SkillsWrapper,
+  SkillsContainer,
+  SkillContainer,
+  SkillInfo,
+  SkillsByCategories,
+} from "./styles";
 import moment from "moment";
-import CircularProgressWithLabel from "@/components/Global/CircularProgressWithLabel";
-
-const skillLanguages = [
-  {
-    title: "JavaScript",
-    experience: "09/21",
-    progress: 80,
-  },
-  {
-    title: "TypeScript",
-    experience: "12/21",
-    progress: 80,
-  },
-];
-
-const skillFrontend = [
-  {
-    title: "ReactJS",
-    experience: moment("02/22", "MM/YY"),
-    progress: 80,
-  },
-  {
-    title: "TypeScript",
-    experience: moment("12/21", "MM/YY").format(),
-    progress: 80,
-  },
-];
-
-const skillList = {
-  FrontEnd: [
-    { name: "ReactJS", start: moment("02/22", "MM/YY").format(), percent: "" },
-    { name: "NextJS", start: moment("02/22", "MM/YY").format(), percent: "" },
-    {
-      name: "AngularJS",
-      start: moment("10/22", "MM/YY").format(),
-      percent: "",
-    },
-    {
-      name: "StyledComponents",
-      start: moment("03/22", "MM/YY").format(),
-      percent: "",
-    },
-  ],
-  BackEnd: [
-    { name: "NodeJs", start: moment("09/21", "MM/YY").format(), percent: "" },
-  ],
-  Database: [
-    { name: "Prisma", start: moment("01/22", "MM/YY").format(), percent: "" },
-    { name: "MongoDB", start: moment("12/21", "MM/YY").format(), percent: "" },
-    {
-      name: "PostgresSQL",
-      start: moment("03/22", "MM/YY").format(),
-      percent: "",
-    },
-  ],
-  Other: [
-    { name: "Docker", start: moment("03/22", "MM/YY").format(), percent: "" },
-    { name: "AWS", start: moment("08/22", "MM/YY").format(), percent: "" },
-    {
-      name: "Git/Github",
-      start: moment("09/21", "MM/YY").format(),
-      percent: "",
-    },
-    { name: "HTML", start: moment("09/21", "MM/YY").format(), percent: "" },
-    { name: "CSS", start: moment("09/21", "MM/YY").format(), percent: "" },
-    { name: "Rest Api", start: moment("09/21", "MM/YY").format(), percent: "" },
-  ],
-};
+import { Progress, Tabs } from "@mantine/core";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiAngular,
+  SiStyledcomponents,
+  SiNodedotjs,
+  SiPrisma,
+  SiMongodb,
+  SiPostgresql,
+  SiDocker,
+  SiAmazonaws,
+  SiGit,
+} from "react-icons/si";
 
 const SkillsSection: React.FC = () => {
   return (
@@ -76,42 +29,223 @@ const SkillsSection: React.FC = () => {
       <SkillsContainer>
         <h2>Skills</h2>
 
-        {skillLanguages.map((element) => {
-          return (
-            <Skill
-              title={element.title}
-              experience={element.experience}
-              progress={element.progress}
-            />
-          );
-        })}
+        <Tabs
+          orientation="vertical"
+          color="pink"
+          variant="pills"
+          defaultValue="languages"
+        >
+          <Tabs.List>
+            <Tabs.Tab value="languages">Languages</Tabs.Tab>
+            <Tabs.Tab value="backend">Back End</Tabs.Tab>
+            <Tabs.Tab value="frontend">Front End</Tabs.Tab>
+            <Tabs.Tab value="database">Database</Tabs.Tab>
+            <Tabs.Tab value="others">Others</Tabs.Tab>
+          </Tabs.List>
+          <hr />
 
-        {/* <Image
-          src="/code-girl.svg"
-          alt="Alienigena no espaço"
-          width={500}
-          height={300}
-        /> */}
+          <Tabs.Panel value="languages" pl="xs">
+            {skillsLanguages.map((element) => {
+              return (
+                <Skill
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="backend" pl="xs">
+            {skillsBackEnd.map((element) => {
+              return (
+                <Skill
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="frontend" pl="xs">
+            <SkillsByCategories>
+              {skillsFrontend.map((element) => {
+                return (
+                  <Skill
+                    title={element.title}
+                    experience={element.experience}
+                    progress={element.progress}
+                    logo={element.logo}
+                  />
+                );
+              })}
+            </SkillsByCategories>
+          </Tabs.Panel>
+
+          <Tabs.Panel value="database" pl="xs">
+            {skillsDatabase.map((element) => {
+              return (
+                <Skill
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="others" pl="xs">
+            {skillsOthers.map((element) => {
+              return (
+                <Skill
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+        </Tabs>
       </SkillsContainer>
     </SkillsWrapper>
   );
 };
 
-const Skill = ({ title, experience, progress }: any) => {
+const Skill = ({ title, experience, progress, logo }: any) => {
   const now = moment();
   const date = moment(experience, "MM/YY");
   const diff = now.diff(date, "years", true);
 
   let parsedExperience = diff.toFixed(1);
-  console.log(parsedExperience);
 
   return (
     <SkillContainer>
-      <p>{title}</p>
-      <p>+ {parsedExperience} years</p>
-      <CircularProgressWithLabel progress={progress} />
+      <SkillInfo key={title}>
+        {logo}
+        <div>
+          <p className="title">{title}</p>
+          <p className="experience">+ {parsedExperience} years</p>
+        </div>
+      </SkillInfo>
+      <Progress color="pink" value={progress} />
     </SkillContainer>
   );
 };
 
 export default SkillsSection;
+
+const skillsLanguages = [
+  {
+    title: "JavaScript",
+    experience: "09/21",
+    progress: 80,
+    logo: <SiJavascript size={38} />,
+  },
+  {
+    title: "TypeScript",
+    experience: "12/21",
+    progress: 80,
+    logo: <SiTypescript size={38} />,
+  },
+];
+
+const skillsFrontend = [
+  {
+    title: "ReactJS",
+    experience: "02/22",
+    progress: 70,
+    logo: <SiReact size={38} />,
+  },
+  {
+    title: "React Native",
+    experience: "02/23",
+    progress: 10,
+    logo: <SiReact size={38} />,
+  },
+  {
+    title: "NextJS",
+    experience: "02/22",
+    progress: 70,
+    logo: <SiNextdotjs size={38} />,
+  },
+  {
+    title: "StyledComponents",
+    experience: "03/22",
+    progress: 50,
+    logo: <SiStyledcomponents size={38} color="#fff" />,
+  },
+  {
+    title: "AngularJS",
+    experience: "10/22",
+    progress: 40,
+    logo: <SiAngular size={38} />,
+  },
+  {
+    title: "AngularJS",
+    experience: "10/22",
+    progress: 40,
+    logo: <SiAngular size={38} />,
+  },
+  {
+    title: "AngularJS",
+    experience: "10/22",
+    progress: 40,
+    logo: <SiAngular size={38} />,
+  },
+];
+
+const skillsBackEnd = [
+  {
+    title: "NodeJS",
+    experience: "09/21",
+    progress: 70,
+    logo: <SiNodedotjs size={38} />,
+  },
+];
+
+const skillsDatabase = [
+  {
+    title: "Prisma",
+    experience: "01/22",
+    progress: 60,
+    logo: <SiPrisma size={38} />,
+  },
+  {
+    title: "MongoDB",
+    experience: "12/21",
+    progress: 80,
+    logo: <SiMongodb size={38} />,
+  },
+  {
+    title: "PostgresSQL",
+    experience: "03/22",
+    progress: 70,
+    logo: <SiPostgresql size={38} />,
+  },
+];
+
+const skillsOthers = [
+  {
+    title: "Docker",
+    experience: "03/22",
+    progress: 60,
+    logo: <SiDocker size={38} />,
+  },
+  {
+    title: "AWS",
+    experience: "08/22",
+    progress: 30,
+    logo: <SiAmazonaws size={38} />,
+  },
+  {
+    title: "Git / Github",
+    experience: "09/21",
+    progress: 80,
+    logo: <SiGit size={38} />,
+  },
+];
