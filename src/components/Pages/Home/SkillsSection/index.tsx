@@ -47,7 +47,7 @@ const SkillsSection: React.FC = () => {
             </Tabs.List>
             <hr />
 
-            <Tabs.Panel value="languages" pl="xs">
+            <Tabs.Panel key="languages" value="languages" pl="xs">
               {skillsLanguages.map((element) => {
                 return (
                   <Skill
@@ -60,7 +60,7 @@ const SkillsSection: React.FC = () => {
               })}
             </Tabs.Panel>
 
-            <Tabs.Panel value="backend" pl="xs">
+            <Tabs.Panel key="backend" value="backend" pl="xs">
               {skillsBackEnd.map((element) => {
                 return (
                   <Skill
@@ -73,7 +73,7 @@ const SkillsSection: React.FC = () => {
               })}
             </Tabs.Panel>
 
-            <Tabs.Panel value="frontend" pl="xs">
+            <Tabs.Panel key="frontend" value="frontend" pl="xs">
               <SkillsByCategories>
                 {skillsFrontend.map((element) => {
                   return (
@@ -88,7 +88,7 @@ const SkillsSection: React.FC = () => {
               </SkillsByCategories>
             </Tabs.Panel>
 
-            <Tabs.Panel value="database" pl="xs">
+            <Tabs.Panel key="database" value="database" pl="xs">
               {skillsDatabase.map((element) => {
                 return (
                   <Skill
@@ -101,7 +101,7 @@ const SkillsSection: React.FC = () => {
               })}
             </Tabs.Panel>
 
-            <Tabs.Panel value="others" pl="xs">
+            <Tabs.Panel key="others" value="others" pl="xs">
               {skillsOthers.map((element) => {
                 return (
                   <Skill
@@ -188,18 +188,6 @@ const skillsFrontend = [
     experience: "03/22",
     progress: 50,
     logo: <SiStyledcomponents size={38} color="#fff" />,
-  },
-  {
-    title: "AngularJS",
-    experience: "10/22",
-    progress: 40,
-    logo: <SiAngular size={38} />,
-  },
-  {
-    title: "AngularJS",
-    experience: "10/22",
-    progress: 40,
-    logo: <SiAngular size={38} />,
   },
   {
     title: "AngularJS",
