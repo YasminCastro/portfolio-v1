@@ -15,6 +15,14 @@ export const SkillsContainer = styled.div`
   height: 100%;
   margin: 0 50px;
 
+  display: flex;
+  align-items: center;
+`;
+
+export const SkillsTabs = styled.div`
+  height: 100%;
+  width: 100%;
+
   p {
     font-size: 20px;
   }
