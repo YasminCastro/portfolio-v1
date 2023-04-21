@@ -31,11 +31,17 @@ export const SkillsContainer = styled.div`
   .mantine-Tabs-root {
     height: 70%;
   }
+
+  .mantine-Tabs-tab {
+    :hover {
+      background: #e64980;
+    }
+  }
 `;
 
 export const SkillContainer = styled.div`
-  width: 200px;
-  padding: 10px;
+  width: 230px;
+  margin: 20px;
 `;
 
 export const SkillsByCategories = styled.div`
