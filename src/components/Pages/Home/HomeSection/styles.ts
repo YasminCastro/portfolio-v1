@@ -41,4 +41,5 @@ export const ArrowDown = styled.div`
   position: absolute;
   bottom: 20px;
   animation: ${upAndDown} 2s linear 4;
+  z-index: -10;
 `;
