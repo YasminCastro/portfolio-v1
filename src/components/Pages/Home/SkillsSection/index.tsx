@@ -47,10 +47,11 @@ const SkillsSection: React.FC = () => {
             </Tabs.List>
             <hr />
 
-            <Tabs.Panel key="languages" value="languages" pl="xs">
+            <Tabs.Panel value="languages" pl="xs">
               {skillsLanguages.map((element) => {
                 return (
                   <Skill
+                    key={`languages-${element.title}`}
                     title={element.title}
                     experience={element.experience}
                     progress={element.progress}
@@ -60,10 +61,11 @@ const SkillsSection: React.FC = () => {
               })}
             </Tabs.Panel>
 
-            <Tabs.Panel key="backend" value="backend" pl="xs">
+            <Tabs.Panel value="backend" pl="xs">
               {skillsBackEnd.map((element) => {
                 return (
                   <Skill
+                    key={`backend-${element.title}`}
                     title={element.title}
                     experience={element.experience}
                     progress={element.progress}
@@ -73,11 +75,12 @@ const SkillsSection: React.FC = () => {
               })}
             </Tabs.Panel>
 
-            <Tabs.Panel key="frontend" value="frontend" pl="xs">
+            <Tabs.Panel value="frontend" pl="xs">
               <SkillsByCategories>
                 {skillsFrontend.map((element) => {
                   return (
                     <Skill
+                      key={`frontend-${element.title}`}
                       title={element.title}
                       experience={element.experience}
                       progress={element.progress}
@@ -88,10 +91,11 @@ const SkillsSection: React.FC = () => {
               </SkillsByCategories>
             </Tabs.Panel>
 
-            <Tabs.Panel key="database" value="database" pl="xs">
+            <Tabs.Panel value="database" pl="xs">
               {skillsDatabase.map((element) => {
                 return (
                   <Skill
+                    key={`database-${element.title}`}
                     title={element.title}
                     experience={element.experience}
                     progress={element.progress}
@@ -101,10 +105,11 @@ const SkillsSection: React.FC = () => {
               })}
             </Tabs.Panel>
 
-            <Tabs.Panel key="others" value="others" pl="xs">
+            <Tabs.Panel value="others" pl="xs">
               {skillsOthers.map((element) => {
                 return (
                   <Skill
+                    key={`others-${element.title}`}
                     title={element.title}
                     experience={element.experience}
                     progress={element.progress}
@@ -134,7 +139,7 @@ const Skill = ({ title, experience, progress, logo }: any) => {
   let parsedExperience = diff.toFixed(1);
 
   return (
-    <SkillContainer key={title}>
+    <SkillContainer>
       <SkillInfo>
         {logo}
         <div>
