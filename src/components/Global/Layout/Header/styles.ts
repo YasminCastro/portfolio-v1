@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   background: ${colors.black};
+  z-index: 100;
 `;
 
 export const HeaderContainer = styled.div`

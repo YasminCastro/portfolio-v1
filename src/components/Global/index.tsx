@@ -1,7 +1,7 @@
 import { colors } from "@/styles/GlobalStyles";
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.a`
   display: flex;
   justify-content: center;
   background: ${colors.white};
