@@ -1,13 +1,18 @@
 import Image from "next/image";
 import { ContactContainer, LeftInfo } from "./styles";
 import SocialMedia from "@/components/Global/SocialMedia";
+import useTranslation from "next-translate/useTranslation";
 
 const ContactSection: React.FC = () => {
+  const { t } = useTranslation("common");
+  const title = t("contact.title");
+  const subtitle = t("contact.subtitle");
+
   return (
     <ContactContainer id="contact">
       <LeftInfo>
-        <p>Let's make something amazing together!</p>
-        <p className="contact">Contact me!</p>
+        <p>{title}</p>
+        <p className="contact">{subtitle}</p>
         <SocialMedia />
       </LeftInfo>
 

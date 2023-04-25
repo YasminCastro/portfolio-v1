@@ -10,5 +10,23 @@
     "i-am": "Eu sou",
     "developer": "Desenvolvedora Full-Stack",
     "contact": "Contato"
+  },
+  "about": {
+    "title": "Sobre",
+    "text": "Oie! Eu sou Yasmin Castro, sou Desenvolvedora Full Stack focada em criar boas experiências na tecnologia. Programar tem sido minha paixão desde que comecei a trabalhar com computadores e venho me especializando em desenvolvimento web desde 2021. Sinto orgulho em desenvolver sites e aplicativos totalmente funcionais que proporcionam a melhor experiência possível ao usuário. Estou sempre ansiosa para aprender sobre novas tecnologias e aplicá-las em meu trabalho."
+  },
+  "skills": {
+    "languages": "Linguagens",
+    "others": "Outros",
+    "database": "Banco de dados",
+    "years": "anos"
+  },
+  "projects": {
+    "title": "Projects",
+    "github": "Confira meu Github"
+  },
+  "contact": {
+    "title": "Vamos fazer algo incrível juntos!",
+    "subtitle": "Entre em contato!"
   }
 }

@@ -1,8 +1,14 @@
 import Image from "next/image";
 import { AboutContainer, RightInfo } from "./styles";
 import { Button } from "@/components/Global";
+import useTranslation from "next-translate/useTranslation";
 
 const AboutSection: React.FC = () => {
+  const { t } = useTranslation("common");
+
+  const title = t("about.title");
+  const text = t("about.text");
+
   return (
     <AboutContainer id="about">
       <Image
@@ -12,14 +18,8 @@ const AboutSection: React.FC = () => {
         height={480}
       />
       <RightInfo>
-        <h2>About</h2>
-        <p>
-          Hi! I am Ankit yadav, a web designer/developer focused on crafting
-          great web experiences. Designing and Coding have been my passion since
-          the days I started working with computers but I found myself into web
-          design/development since 2007. I enjoy creating beautifully designed,
-          intuitive and functional websites.
-        </p>
+        <h2>{title}</h2>
+        <p>{text}</p>
         <Button>Download CV</Button>
       </RightInfo>
     </AboutContainer>

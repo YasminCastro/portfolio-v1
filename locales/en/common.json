@@ -10,5 +10,23 @@
     "i-am": "I'm",
     "developer": "Full-Stack Developer",
     "contact": "Contact"
+  },
+  "about": {
+    "title": "About",
+    "text": "Hi! I am Yasmin Castro, a Full Stack Developer focused on crafting amazing web experiences. Coding have been my passions since I started working with computers, and I have been specializing in web development since 2021. . I take pride in developing fully functional websites and applications that provide the best possible user experience,  I'm always eager to learn about new technologies and apply them to my work."
+  },
+  "skills": {
+    "languages": "Languages",
+    "others": "Others",
+    "database": "Database",
+    "years": "years"
+  },
+  "projects": {
+    "title": "Projects",
+    "github": "Check my Github"
+  },
+  "contact": {
+    "title": "Let's make something amazing together!",
+    "subtitle": "Contact me!"
   }
 }

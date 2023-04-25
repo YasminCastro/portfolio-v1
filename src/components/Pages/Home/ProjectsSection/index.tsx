@@ -4,13 +4,17 @@ import { Button } from "@/components/Global";
 import { Carousel } from "@mantine/carousel";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import useTranslation from "next-translate/useTranslation";
 
 const ProjectsSection: React.FC = () => {
   const autoplay = useRef(Autoplay({ delay: 10000 }));
+  const { t } = useTranslation("common");
+  const title = t("projects.title");
+  const github = t("projects.github");
 
   return (
     <ProjectsContainer id="projects">
-      <h2>Projects</h2>
+      <h2>{title}</h2>
       <Carousel
         mx="auto"
         height={400}
@@ -26,7 +30,7 @@ const ProjectsSection: React.FC = () => {
         </Carousel.Slide>
       </Carousel>
       <Button href="https://github.com/YasminCastro" target="_blank">
-        Check my repositories
+        {github}
       </Button>
     </ProjectsContainer>
   );

@@ -24,8 +24,15 @@ import {
   SiAmazonaws,
   SiGit,
 } from "react-icons/si";
+import useTranslation from "next-translate/useTranslation";
 
 const SkillsSection: React.FC = () => {
+  const { t } = useTranslation("common");
+
+  const languages = t("skills.languages");
+  const database = t("skills.database");
+  const others = t("skills.others");
+
   return (
     <SkillsWrapper id="skills">
       <SkillsContainer>
@@ -39,11 +46,11 @@ const SkillsSection: React.FC = () => {
             defaultValue="languages"
           >
             <Tabs.List>
-              <Tabs.Tab value="languages">Languages</Tabs.Tab>
+              <Tabs.Tab value="languages">{languages}</Tabs.Tab>
               <Tabs.Tab value="backend">Back End</Tabs.Tab>
               <Tabs.Tab value="frontend">Front End</Tabs.Tab>
-              <Tabs.Tab value="database">Database</Tabs.Tab>
-              <Tabs.Tab value="others">Others</Tabs.Tab>
+              <Tabs.Tab value="database">{database}</Tabs.Tab>
+              <Tabs.Tab value="others">{others}</Tabs.Tab>
             </Tabs.List>
             <hr />
 
@@ -132,6 +139,9 @@ const SkillsSection: React.FC = () => {
 };
 
 const Skill = ({ title, experience, progress, logo }: any) => {
+  const { t } = useTranslation("common");
+  const years = t("skills.years");
+
   const now = moment();
   const date = moment(experience, "MM/YY");
   const diff = now.diff(date, "years", true);
@@ -144,7 +154,9 @@ const Skill = ({ title, experience, progress, logo }: any) => {
         {logo}
         <div>
           <p className="title">{title}</p>
-          <p className="experience">+ {parsedExperience} years</p>
+          <p className="experience">
+            + {parsedExperience} {years}
+          </p>
         </div>
       </SkillInfo>
       <Progress color="pink" value={progress} />
