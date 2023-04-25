@@ -3,6 +3,7 @@ import { ArrowDown, HomeContainer, LeftInfo } from "./styles";
 import { Button } from "@/components/Global";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
 
 const HomeSection: React.FC = () => {
   const { t } = useTranslation("common");
@@ -27,7 +28,9 @@ const HomeSection: React.FC = () => {
         height={350}
       />
       <ArrowDown>
-        <MdOutlineKeyboardDoubleArrowDown size={30} />
+        <Link href="#about">
+          <MdOutlineKeyboardDoubleArrowDown size={30} />
+        </Link>
       </ArrowDown>
     </HomeContainer>
   );
