@@ -1,5 +1,5 @@
 import { SocialMediaWrapper } from "./styles";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 const SocialMedia = ({ showEmail }: any) => {
@@ -15,6 +15,12 @@ const SocialMedia = ({ showEmail }: any) => {
         target="_blank"
       >
         <FaLinkedin size={iconSizes} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/yasmin-castro-b579451b8"
+        target="_blank"
+      >
+        <FaGithub size={iconSizes} />
       </a>
       {/* <Link href="">
         <FaDiscord size={iconSizes} />
