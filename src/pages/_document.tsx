@@ -33,8 +33,8 @@ export default class _Document extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          <link rel="shortcut icon" href="/favicon.png" />
-          <link rel="icon" href="/icons/favicon.png" />
+          <link rel="shortcut icon" href="/fire-ball.svg" />
+          <link rel="icon" href="/fire-ball.svg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
         </Head>
