@@ -27,7 +27,7 @@ import {
 
 const SkillsSection: React.FC = () => {
   return (
-    <SkillsWrapper id="#skills">
+    <SkillsWrapper id="skills">
       <SkillsContainer>
         <SkillsTabs>
           <h2>Skills</h2>
