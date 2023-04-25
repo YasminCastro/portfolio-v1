@@ -21,6 +21,10 @@ export const HeaderContainer = styled.div`
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    margin: 0 50px;
+  }
 `;
 
 export const HeaderLeft = styled.div`
