@@ -1,21 +1,21 @@
-import Link from "next/link";
 import { SocialMediaWrapper } from "./styles";
-import { FaDiscord, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
-const SocialMedia = () => {
+const SocialMedia = ({ showEmail }: any) => {
   const iconSizes = 26;
   return (
     <SocialMediaWrapper>
-      <Link href="mailto:yasminsdcastro@gmail.com">
+      {showEmail && "yasminsdcastro@gmail.com"}
+      <a href="mailto:yasminsdcastro@gmail.com" target="_blank">
         <HiOutlineMail size={iconSizes} />
-      </Link>
-      <Link
+      </a>
+      <a
         href="https://www.linkedin.com/in/yasmin-castro-b579451b8"
         target="_blank"
       >
         <FaLinkedin size={iconSizes} />
-      </Link>
+      </a>
       {/* <Link href="">
         <FaDiscord size={iconSizes} />
       </Link> */}

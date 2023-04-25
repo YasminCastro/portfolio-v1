@@ -13,7 +13,7 @@ const ContactSection: React.FC = () => {
       <LeftInfo>
         <p>{title}</p>
         <p className="contact">{subtitle}</p>
-        <SocialMedia />
+        <SocialMedia showEmail={true} />
       </LeftInfo>
 
       <Image

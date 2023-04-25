@@ -22,5 +22,3 @@ export const FooterContainer = styled.div`
     font-size: 14px;
   }
 `;
-
-export const Icons = styled.div``;
