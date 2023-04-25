@@ -8,9 +8,32 @@ import {
   PageLinks,
 } from "./styles";
 import { HiTranslate } from "react-icons/hi";
+import { useRouter } from "next/router";
 import SocialMedia from "../../SocialMedia";
+import { useEffect, useState } from "react";
+import useTranslation from "next-translate/useTranslation";
 
 const Header = () => {
+  const { t } = useTranslation("common");
+  const [locale, setLocale] = useState("en");
+  const router = useRouter();
+
+  const home = t("header.home");
+  const about = t("header.about");
+  const projects = t("header.projects");
+
+  useEffect(() => {
+    if (router.locale === "en") {
+      setLocale("pt-BR");
+    } else {
+      setLocale("en");
+    }
+  }, [router.locale]);
+
+  function changeToEn() {
+    router.push("/", undefined, { locale });
+  }
+
   return (
     <HeaderWrapper>
       <HeaderContainer>
@@ -22,21 +45,23 @@ const Header = () => {
         <HeaderRight>
           <PageLinks>
             <Link href="#home">
-              <p>Home</p>
+              <p>{home}</p>
             </Link>
             <Link href="#about">
-              <p>About</p>
+              <p>{about}</p>
             </Link>
             <Link href="#skills">
               <p>Skills</p>
             </Link>
             <Link href="#projects">
-              <p>Projects</p>
+              <p>{projects}</p>
             </Link>
           </PageLinks>
           <Icons>
             <SocialMedia />
-            <HiTranslate size={26} />
+            <button onClick={changeToEn}>
+              <HiTranslate size={26} />
+            </button>
           </Icons>
         </HeaderRight>
       </HeaderContainer>

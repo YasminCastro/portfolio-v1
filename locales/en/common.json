@@ -1,0 +1,14 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "home": {
+    "hello": "Hi!",
+    "i-am": "I'm",
+    "developer": "Full-Stack Developer",
+    "contact": "Contact"
+  }
+}

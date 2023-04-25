@@ -18,8 +18,9 @@ export const LeftInfo = styled.div`
   }
 
   h1 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 44px;
+    line-height: 58px;
+    white-space: nowrap;
   }
 
   a {

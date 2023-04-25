@@ -2,16 +2,23 @@ import Image from "next/image";
 import { ArrowDown, HomeContainer, LeftInfo } from "./styles";
 import { Button } from "@/components/Global";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+import useTranslation from "next-translate/useTranslation";
 
 const HomeSection: React.FC = () => {
+  const { t } = useTranslation("common");
+  const hello = t("home.hello");
+  const iAm = t("home.i-am");
+  const developer = t("home.developer");
+  const contact = t("home.contact");
+
   return (
     <HomeContainer>
       <LeftInfo>
-        <p>Hi!</p>
+        <p>{hello}</p>
         <h1>
-          I’m Yasmin, <br /> Full-Stack Developer
+          {iAm} Yasmin, <br /> {developer}
         </h1>
-        <Button href="#contact">Contact</Button>
+        <Button href="#contact">{contact}</Button>
       </LeftInfo>
       <Image
         src="/outer-space.svg"
