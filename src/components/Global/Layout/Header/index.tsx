@@ -21,17 +21,17 @@ const Header = () => {
         </HeaderLeft>
         <HeaderRight>
           <PageLinks>
-            <Link href="#">
+            <Link href="#home">
               <p>Home</p>
             </Link>
-            <Link href="#">
+            <Link href="#about">
               <p>About</p>
             </Link>
-            <Link href="#">
+            <Link href="#skills">
               <p>Skills</p>
             </Link>
-            <Link href="#">
-              <p>Project</p>
+            <Link href="#projects">
+              <p>Projects</p>
             </Link>
           </PageLinks>
           <Icons>

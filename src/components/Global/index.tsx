@@ -11,4 +11,8 @@ export const Button = styled.a`
   border-radius: 14px;
   font-weight: bold;
   font-size: 16px;
+
+  width: fit-content;
+
+  cursor: pointer;
 `;

@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { HomeContainer, RightInfo } from "./styles";
+import { AboutContainer, RightInfo } from "./styles";
 import { Button } from "@/components/Global";
 
 const AboutSection: React.FC = () => {
   return (
-    <HomeContainer>
+    <AboutContainer id="about">
       <Image
         src="/skater-girl.svg"
         alt="Alienigena no espaço"
@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
         </p>
         <Button>Download CV</Button>
       </RightInfo>
-    </HomeContainer>
+    </AboutContainer>
   );
 };
 

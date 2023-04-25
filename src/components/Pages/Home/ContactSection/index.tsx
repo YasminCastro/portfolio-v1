@@ -4,7 +4,7 @@ import SocialMedia from "@/components/Global/SocialMedia";
 
 const ContactSection: React.FC = () => {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <LeftInfo>
         <p>Let's make something amazing together!</p>
         <p className="contact">Contact me!</p>

@@ -11,7 +11,7 @@ const HomeSection: React.FC = () => {
         <h1>
           I’m Yasmin, <br /> Full-Stack Developer
         </h1>
-        <Button>Contact</Button>
+        <Button href="#contact">Contact</Button>
       </LeftInfo>
       <Image
         src="/outer-space.svg"

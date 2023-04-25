@@ -22,8 +22,8 @@ export const LeftInfo = styled.div`
     line-height: 60px;
   }
 
-  button {
-    margin-left: 170px;
+  a {
+    margin-top: 24px;
   }
 `;
 

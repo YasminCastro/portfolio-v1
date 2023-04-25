@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HomeContainer = styled.div`
+export const AboutContainer = styled.div`
   height: calc(100vh - 68px);
   width: 100%;
 
@@ -26,7 +26,7 @@ export const RightInfo = styled.div`
     text-align: right;
   }
 
-  button {
+  a {
     margin-top: 24px;
   }
 `;
