@@ -27,6 +27,17 @@ export const LeftInfo = styled.div`
   a {
     margin-top: 24px;
   }
+
+  @media (max-width: 1300px) {
+    h1 {
+      font-size: 34px;
+      line-height: 48px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 `;
 
 const upAndDown = keyframes`  
@@ -43,4 +54,10 @@ export const ArrowDown = styled.div`
   position: absolute;
   bottom: 20px;
   animation: ${upAndDown} 2s linear 4;
+`;
+
+export const ImageSize = styled.div`
+  width: 550px;
+  height: 350px;
+  position: relative;
 `;

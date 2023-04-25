@@ -30,4 +30,26 @@ export const RightInfo = styled.div`
   a {
     margin-top: 24px;
   }
+
+  @media (max-width: 1300px) {
+    h2 {
+      margin-bottom: 50px;
+      font-size: 68px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+`;
+
+export const ImageSize = styled.div`
+  width: 480px;
+  height: 480px;
+  position: relative;
+
+  @media (max-width: 1300px) {
+    width: 380px;
+    height: 380px;
+  }
 `;

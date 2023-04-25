@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, HomeContainer, LeftInfo } from "./styles";
+import { ArrowDown, HomeContainer, ImageSize, LeftInfo } from "./styles";
 import { Button } from "@/components/Global";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import useTranslation from "next-translate/useTranslation";
@@ -21,12 +21,9 @@ const HomeSection: React.FC = () => {
         </h1>
         <Button href="#contact">{contact}</Button>
       </LeftInfo>
-      <Image
-        src="/outer-space.svg"
-        alt="Alienigena no espaço"
-        width={550}
-        height={350}
-      />
+      <ImageSize>
+        <Image src="/outer-space.svg" alt="Alienigena no espaço" fill />
+      </ImageSize>
       <ArrowDown>
         <Link href="#about">
           <MdOutlineKeyboardDoubleArrowDown size={30} />
