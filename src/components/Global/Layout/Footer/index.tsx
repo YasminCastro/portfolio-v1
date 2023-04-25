@@ -5,10 +5,8 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterContainer>
-        <Icons>
-          <SocialMedia />
-        </Icons>
         <p>Copyright © 2023 Yas Castro.</p>
+        <SocialMedia />
       </FooterContainer>
     </FooterWrapper>
   );

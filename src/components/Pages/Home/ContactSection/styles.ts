@@ -1,7 +1,7 @@
 import { colors } from "@/styles/GlobalStyles";
 import styled from "styled-components";
 
-export const HomeContainer = styled.div`
+export const ContactContainer = styled.div`
   height: calc(100vh - 68px);
   width: 100%;
 

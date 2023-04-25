@@ -4,27 +4,23 @@ import styled from "styled-components";
 export const FooterWrapper = styled.footer`
   width: 100%;
   max-width: 100vw;
-  height: 200px;
+  height: 64px;
 
   display: flex;
   align-items: center;
+  border-top: 1px solid ${colors.gray800};
 `;
 
 export const FooterContainer = styled.div`
   width: 100%;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
 
-  gap: 50px;
   p {
     color: ${colors.gray700};
     font-size: 14px;
   }
 `;
 
-export const Icons = styled.div`
-  display: flex;
-  gap: 40px;
-`;
+export const Icons = styled.div``;

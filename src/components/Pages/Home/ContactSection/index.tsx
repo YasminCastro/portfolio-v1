@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { HomeContainer, LeftInfo } from "./styles";
+import { ContactContainer, LeftInfo } from "./styles";
 import SocialMedia from "@/components/Global/SocialMedia";
 
 const ContactSection: React.FC = () => {
   return (
-    <HomeContainer>
+    <ContactContainer>
       <LeftInfo>
         <p>Let's make something amazing together!</p>
         <p className="contact">Contact me!</p>
@@ -17,7 +17,7 @@ const ContactSection: React.FC = () => {
         width={480}
         height={480}
       />
-    </HomeContainer>
+    </ContactContainer>
   );
 };
 
