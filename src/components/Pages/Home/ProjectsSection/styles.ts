@@ -21,3 +21,10 @@ export const ProjectsContainer = styled.div`
     }
   }
 `;
+
+export const ImageSize = styled.div<{ width: number; height: number }>`
+  position: relative;
+
+  width: ${({ width }) => width}px;
+  height: ${({ height }) => height}px;
+`;

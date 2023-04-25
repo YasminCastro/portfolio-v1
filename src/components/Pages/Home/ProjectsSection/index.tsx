@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProjectsContainer } from "./styles";
+import { ImageSize, ProjectsContainer } from "./styles";
 import { Button } from "@/components/Global";
 import { Carousel } from "@mantine/carousel";
 import { useRef } from "react";
@@ -24,9 +24,15 @@ const ProjectsSection: React.FC = () => {
         onMouseEnter={autoplay.current.stop}
         onMouseLeave={autoplay.current.reset}
         slideSize="33.333333%"
+        breakpoints={[
+          { maxWidth: "md", slideSize: "50%" },
+          { maxWidth: "sm", slideSize: "100%" },
+        ]}
       >
         <Carousel.Slide>
-          <Image src="/wizard.png" alt="Teste" width={900} height={400} />
+          <ImageSize width={900} height={400}>
+            <Image src="/wizard.png" alt="Teste" fill />
+          </ImageSize>
         </Carousel.Slide>
       </Carousel>
       <Button href="https://github.com/YasminCastro" target="_blank">
