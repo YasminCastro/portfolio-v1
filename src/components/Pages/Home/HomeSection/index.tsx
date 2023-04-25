@@ -13,7 +13,7 @@ const HomeSection: React.FC = () => {
   const contact = t("home.contact");
 
   return (
-    <HomeContainer>
+    <HomeContainer id="home">
       <LeftInfo>
         <p>{hello}</p>
         <h1>
