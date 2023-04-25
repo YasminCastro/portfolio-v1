@@ -8,6 +8,8 @@ export const SkillsWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  scroll-margin-top: 90px;
 `;
 
 export const SkillsContainer = styled.div`

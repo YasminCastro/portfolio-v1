@@ -7,6 +7,7 @@ export const HomeContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  scroll-margin-top: 90px;
 `;
 
 export const LeftInfo = styled.div`

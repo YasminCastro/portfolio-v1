@@ -12,4 +12,6 @@ export const ProjectsContainer = styled.div`
   h2 {
     font-size: 48px;
   }
+
+  scroll-margin-top: 50px;
 `;
