@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   HeaderContainer,
   HeaderLeft,
+  MobileWrapper,
   HeaderRight,
   HeaderWrapper,
   Icons,
@@ -64,6 +65,14 @@ const Header = () => {
             </button>
           </Icons>
         </HeaderRight>
+        <MobileWrapper>
+          <Icons>
+            <SocialMedia />
+            <button onClick={changeToEn}>
+              <HiTranslate size={26} />
+            </button>
+          </Icons>
+        </MobileWrapper>
       </HeaderContainer>
     </HeaderWrapper>
   );

@@ -8,6 +8,10 @@ export const ContactContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 900px) {
+    justify-content: space-between;
+  }
 `;
 
 export const LeftInfo = styled.div`

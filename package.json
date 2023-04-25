@@ -14,11 +14,6 @@
     "@mantine/carousel": "^6.0.8",
     "@mantine/core": "^6.0.8",
     "@mantine/hooks": "^6.0.8",
-    "@types/node": "18.15.12",
-    "@types/react": "18.0.37",
-    "@types/react-dom": "18.0.11",
-    "@types/styled-components": "^5.1.26",
-    "add": "^2.0.6",
     "embla-carousel-autoplay": "^7.1.0",
     "embla-carousel-react": "^7.1.0",
     "eslint": "8.38.0",
@@ -29,11 +24,14 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.9",
-    "typescript": "5.0.4",
-    "yarn": "^1.22.19"
+    "typescript": "5.0.4"
   },
   "devDependencies": {
     "next-translate-plugin": "^2.0.5",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "@types/node": "18.15.12",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
+    "@types/styled-components": "^5.1.26"
   }
 }

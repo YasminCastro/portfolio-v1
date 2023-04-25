@@ -41,14 +41,34 @@ export const HeaderRight = styled.div`
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+`;
+
+export const MobileWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 750px) {
+    display: flex;
+  }
 `;
 
 export const Icons = styled.div`
   display: flex;
   gap: 40px;
+
+  @media (max-width: 750px) {
+    gap: 20px;
+  }
 `;
 
 export const PageLinks = styled.div`
   display: flex;
   gap: 50px;
+
+  @media (max-width: 900px) {
+    gap: 20px;
+  }
 `;

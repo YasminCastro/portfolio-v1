@@ -25,6 +25,6 @@ const MainContainer = styled.main`
   margin: 0 48px;
 
   @media (max-width: 1300px) {
-    margin: 0 10px;
+    margin: 0 24px;
   }
 `;
