@@ -37,6 +37,16 @@ export const LeftInfo = styled.div`
       margin-bottom: 10px;
     }
   }
+
+  @media (max-width: 900px) {
+    p {
+      font-size: 30px;
+    }
+
+    .contact {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const ImageSize = styled.div`
@@ -47,5 +57,9 @@ export const ImageSize = styled.div`
   @media (max-width: 1300px) {
     width: 380px;
     height: 380px;
+  }
+  @media (max-width: 900px) {
+    width: 280px;
+    height: 280px;
   }
 `;

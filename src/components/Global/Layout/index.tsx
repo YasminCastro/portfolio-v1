@@ -23,4 +23,8 @@ const MainContainer = styled.main`
   padding-top: 64px;
 
   margin: 0 48px;
+
+  @media (max-width: 1300px) {
+    margin: 0 10px;
+  }
 `;

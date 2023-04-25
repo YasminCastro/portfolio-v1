@@ -38,6 +38,17 @@ export const LeftInfo = styled.div`
       font-size: 16px;
     }
   }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
 `;
 
 const upAndDown = keyframes`  
