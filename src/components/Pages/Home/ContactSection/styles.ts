@@ -25,4 +25,27 @@ export const LeftInfo = styled.div`
     color: ${colors.gray700};
     margin-bottom: 20px;
   }
+
+  @media (max-width: 1300px) {
+    p {
+      font-size: 38px;
+    }
+
+    .contact {
+      margin-top: 6px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+`;
+
+export const ImageSize = styled.div`
+  width: 480px;
+  height: 480px;
+  position: relative;
+
+  @media (max-width: 1300px) {
+    width: 380px;
+    height: 380px;
+  }
 `;

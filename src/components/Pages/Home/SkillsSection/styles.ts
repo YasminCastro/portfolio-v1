@@ -19,6 +19,10 @@ export const SkillsContainer = styled.div`
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 1400px) {
+    align-items: flex-end;
+  }
 `;
 
 export const SkillsTabs = styled.div`
@@ -45,6 +49,12 @@ export const SkillsTabs = styled.div`
   .mantine-Tabs-tab {
     :hover {
       background: #e64980;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    h2 {
+      font-size: 70px;
     }
   }
 `;
@@ -78,5 +88,16 @@ export const SkillInfo = styled.div`
     font-weight: 100;
     font-size: 14px;
     color: ${colors.gray800};
+  }
+`;
+
+export const ImageSize = styled.div`
+  width: 550px;
+  height: 350px;
+  position: relative;
+
+  @media (max-width: 1400px) {
+    width: 450px;
+    height: 250px;
   }
 `;

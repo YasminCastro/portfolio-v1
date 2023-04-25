@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactContainer, LeftInfo } from "./styles";
+import { ContactContainer, ImageSize, LeftInfo } from "./styles";
 import SocialMedia from "@/components/Global/SocialMedia";
 import useTranslation from "next-translate/useTranslation";
 
@@ -16,12 +16,9 @@ const ContactSection: React.FC = () => {
         <SocialMedia showEmail={true} />
       </LeftInfo>
 
-      <Image
-        src="/green-code-girl.svg"
-        alt="Alienigena no espaço"
-        width={480}
-        height={480}
-      />
+      <ImageSize>
+        <Image src="/green-code-girl.svg" alt="Alienigena no espaço" fill />
+      </ImageSize>
     </ContactContainer>
   );
 };

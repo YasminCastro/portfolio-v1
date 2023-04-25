@@ -14,4 +14,10 @@ export const ProjectsContainer = styled.div`
   }
 
   scroll-margin-top: 50px;
+
+  @media (max-width: 1300px) {
+    h2 {
+      font-size: 34px;
+    }
+  }
 `;

@@ -5,6 +5,7 @@ import {
   SkillInfo,
   SkillsByCategories,
   SkillsTabs,
+  ImageSize,
 } from "./styles";
 import moment from "moment";
 import Image from "next/image";
@@ -127,12 +128,9 @@ const SkillsSection: React.FC = () => {
             </Tabs.Panel>
           </Tabs>
         </SkillsTabs>
-        <Image
-          src="/code.svg"
-          alt="Alienigena no espaço"
-          width={550}
-          height={350}
-        />
+        <ImageSize>
+          <Image src="/code.svg" alt="Alienigena no espaço" fill />
+        </ImageSize>
       </SkillsContainer>
     </SkillsWrapper>
   );
