@@ -71,6 +71,11 @@ export const SkillsByCategories = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
+
+  @media (max-width: 750px) {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
 `;
 
 export const SkillInfo = styled.div`
