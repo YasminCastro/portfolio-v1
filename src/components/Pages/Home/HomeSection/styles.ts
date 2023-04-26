@@ -86,4 +86,8 @@ export const ImageSize = styled.div`
     width: 350px;
     height: 350px;
   }
+
+  @media (max-width: 400px) {
+    width: 250px;
+  }
 `;
