@@ -8,6 +8,10 @@ export const HomeContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   scroll-margin-top: 90px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftInfo = styled.div`
@@ -49,6 +53,12 @@ export const LeftInfo = styled.div`
       font-size: 14px;
     }
   }
+
+  @media (max-width: 500px) {
+    h1 {
+      white-space: normal;
+    }
+  }
 `;
 
 const upAndDown = keyframes`  
@@ -71,4 +81,9 @@ export const ImageSize = styled.div`
   width: 550px;
   height: 350px;
   position: relative;
+
+  @media (max-width: 700px) {
+    width: 350px;
+    height: 350px;
+  }
 `;
