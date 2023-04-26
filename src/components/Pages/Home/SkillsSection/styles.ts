@@ -20,7 +20,7 @@ export const SkillsContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1200px) {
     align-items: flex-end;
   }
 `;
@@ -92,12 +92,12 @@ export const SkillInfo = styled.div`
 `;
 
 export const ImageSize = styled.div`
-  width: 550px;
-  height: 350px;
+  width: 650px;
+  height: 550px;
   position: relative;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1200px) {
     width: 450px;
-    height: 250px;
+    height: 300px;
   }
 `;
