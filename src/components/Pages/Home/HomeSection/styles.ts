@@ -11,6 +11,7 @@ export const HomeContainer = styled.div`
 
   @media (max-width: 700px) {
     flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -58,6 +59,13 @@ export const LeftInfo = styled.div`
     h1 {
       white-space: normal;
     }
+
+    display: flex;
+    flex-direction: column;
+
+    a {
+      align-self: center;
+    }
   }
 `;
 
@@ -89,5 +97,6 @@ export const ImageSize = styled.div`
 
   @media (max-width: 400px) {
     width: 250px;
+    height: 250px;
   }
 `;
