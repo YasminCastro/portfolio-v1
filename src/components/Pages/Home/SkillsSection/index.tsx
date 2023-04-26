@@ -1,11 +1,12 @@
 import {
   SkillsWrapper,
-  SkillsContainer,
+  SkillsContainerDesktop,
   SkillContainer,
   SkillInfo,
   SkillsByCategories,
   SkillsTabs,
   ImageSize,
+  SkillsContainerMobile,
 } from "./styles";
 import moment from "moment";
 import Image from "next/image";
@@ -36,103 +37,210 @@ const SkillsSection: React.FC = () => {
 
   return (
     <SkillsWrapper id="skills">
-      <SkillsContainer>
-        <SkillsTabs>
-          <h2>Skills</h2>
-
-          <Tabs
-            orientation="vertical"
-            color="pink"
-            variant="pills"
-            defaultValue="languages"
-          >
-            <Tabs.List>
-              <Tabs.Tab value="languages">{languages}</Tabs.Tab>
-              <Tabs.Tab value="backend">Back End</Tabs.Tab>
-              <Tabs.Tab value="frontend">Front End</Tabs.Tab>
-              <Tabs.Tab value="database">{database}</Tabs.Tab>
-              <Tabs.Tab value="others">{others}</Tabs.Tab>
-            </Tabs.List>
-            <hr />
-
-            <Tabs.Panel value="languages" pl="xs">
-              {skillsLanguages.map((element) => {
-                return (
-                  <Skill
-                    key={`languages-${element.title}`}
-                    title={element.title}
-                    experience={element.experience}
-                    progress={element.progress}
-                    logo={element.logo}
-                  />
-                );
-              })}
-            </Tabs.Panel>
-
-            <Tabs.Panel value="backend" pl="xs">
-              {skillsBackEnd.map((element) => {
-                return (
-                  <Skill
-                    key={`backend-${element.title}`}
-                    title={element.title}
-                    experience={element.experience}
-                    progress={element.progress}
-                    logo={element.logo}
-                  />
-                );
-              })}
-            </Tabs.Panel>
-
-            <Tabs.Panel value="frontend" pl="xs">
-              <SkillsByCategories>
-                {skillsFrontend.map((element) => {
-                  return (
-                    <Skill
-                      key={`frontend-${element.title}`}
-                      title={element.title}
-                      experience={element.experience}
-                      progress={element.progress}
-                      logo={element.logo}
-                    />
-                  );
-                })}
-              </SkillsByCategories>
-            </Tabs.Panel>
-
-            <Tabs.Panel value="database" pl="xs">
-              {skillsDatabase.map((element) => {
-                return (
-                  <Skill
-                    key={`database-${element.title}`}
-                    title={element.title}
-                    experience={element.experience}
-                    progress={element.progress}
-                    logo={element.logo}
-                  />
-                );
-              })}
-            </Tabs.Panel>
-
-            <Tabs.Panel value="others" pl="xs">
-              {skillsOthers.map((element) => {
-                return (
-                  <Skill
-                    key={`others-${element.title}`}
-                    title={element.title}
-                    experience={element.experience}
-                    progress={element.progress}
-                    logo={element.logo}
-                  />
-                );
-              })}
-            </Tabs.Panel>
-          </Tabs>
-        </SkillsTabs>
-        <ImageSize>
-          <Image src="/code.svg" alt="Alienigena no espaço" fill />
-        </ImageSize>
-      </SkillsContainer>
+      <SkillsDesktop
+        languages={languages}
+        database={database}
+        others={others}
+      />
+      <SkillsMobile languages={languages} database={database} others={others} />
     </SkillsWrapper>
+  );
+};
+
+const SkillsMobile = ({ languages, database, others }: any) => {
+  return (
+    <SkillsContainerMobile>
+      <SkillsTabs>
+        <h2>Skills</h2>
+
+        <Tabs color="pink" variant="pills" defaultValue="languages">
+          <Tabs.List position="center">
+            <Tabs.Tab value="languages">{languages}</Tabs.Tab>
+            <Tabs.Tab value="backend">Back End</Tabs.Tab>
+            <Tabs.Tab value="frontend">Front End</Tabs.Tab>
+            <Tabs.Tab value="database">{database}</Tabs.Tab>
+            <Tabs.Tab value="others">{others}</Tabs.Tab>
+          </Tabs.List>
+          <hr />
+
+          <Tabs.Panel value="languages" pl="xs">
+            {skillsLanguages.map((element) => {
+              return (
+                <Skill
+                  key={`languages-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="backend" pl="xs">
+            {skillsBackEnd.map((element) => {
+              return (
+                <Skill
+                  key={`backend-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="frontend" pl="xs">
+            <SkillsByCategories>
+              {skillsFrontend.map((element) => {
+                return (
+                  <Skill
+                    key={`frontend-${element.title}`}
+                    title={element.title}
+                    experience={element.experience}
+                    progress={element.progress}
+                    logo={element.logo}
+                  />
+                );
+              })}
+            </SkillsByCategories>
+          </Tabs.Panel>
+
+          <Tabs.Panel value="database" pl="xs">
+            {skillsDatabase.map((element) => {
+              return (
+                <Skill
+                  key={`database-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="others" pl="xs">
+            {skillsOthers.map((element) => {
+              return (
+                <Skill
+                  key={`others-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+        </Tabs>
+      </SkillsTabs>
+      <ImageSize>
+        <Image src="/code.svg" alt="Alienigena no espaço" fill />
+      </ImageSize>
+    </SkillsContainerMobile>
+  );
+};
+
+const SkillsDesktop = ({ languages, database, others }: any) => {
+  return (
+    <SkillsContainerDesktop>
+      <SkillsTabs>
+        <h2>Skills</h2>
+
+        <Tabs
+          orientation="vertical"
+          color="pink"
+          variant="pills"
+          defaultValue="languages"
+        >
+          <Tabs.List>
+            <Tabs.Tab value="languages">{languages}</Tabs.Tab>
+            <Tabs.Tab value="backend">Back End</Tabs.Tab>
+            <Tabs.Tab value="frontend">Front End</Tabs.Tab>
+            <Tabs.Tab value="database">{database}</Tabs.Tab>
+            <Tabs.Tab value="others">{others}</Tabs.Tab>
+          </Tabs.List>
+          <hr />
+
+          <Tabs.Panel value="languages" pl="xs">
+            {skillsLanguages.map((element) => {
+              return (
+                <Skill
+                  key={`languages-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="backend" pl="xs">
+            {skillsBackEnd.map((element) => {
+              return (
+                <Skill
+                  key={`backend-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="frontend" pl="xs">
+            <SkillsByCategories>
+              {skillsFrontend.map((element) => {
+                return (
+                  <Skill
+                    key={`frontend-${element.title}`}
+                    title={element.title}
+                    experience={element.experience}
+                    progress={element.progress}
+                    logo={element.logo}
+                  />
+                );
+              })}
+            </SkillsByCategories>
+          </Tabs.Panel>
+
+          <Tabs.Panel value="database" pl="xs">
+            {skillsDatabase.map((element) => {
+              return (
+                <Skill
+                  key={`database-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="others" pl="xs">
+            {skillsOthers.map((element) => {
+              return (
+                <Skill
+                  key={`others-${element.title}`}
+                  title={element.title}
+                  experience={element.experience}
+                  progress={element.progress}
+                  logo={element.logo}
+                />
+              );
+            })}
+          </Tabs.Panel>
+        </Tabs>
+      </SkillsTabs>
+      <ImageSize>
+        <Image src="/code.svg" alt="Alienigena no espaço" fill />
+      </ImageSize>
+    </SkillsContainerDesktop>
   );
 };
 

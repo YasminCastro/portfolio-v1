@@ -12,7 +12,7 @@ export const SkillsWrapper = styled.div`
   scroll-margin-top: 90px;
 `;
 
-export const SkillsContainer = styled.div`
+export const SkillsContainerDesktop = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 50px;
@@ -22,6 +22,23 @@ export const SkillsContainer = styled.div`
 
   @media (max-width: 1200px) {
     align-items: flex-end;
+  }
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
+export const SkillsContainerMobile = styled.div`
+  display: none;
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  @media (max-width: 500px) {
+    display: flex;
+    justify-content: center;
   }
 `;
 
@@ -104,5 +121,9 @@ export const ImageSize = styled.div`
   @media (max-width: 1200px) {
     width: 450px;
     height: 300px;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
