@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { AboutContainer, ImageSize, RightInfo } from "./styles";
+import {
+  AboutContainerDesktop,
+  AboutContainerMobile,
+  AboutWrapper,
+  ImageSize,
+  RightInfo,
+} from "./styles";
 import { Button } from "@/components/Global";
 import useTranslation from "next-translate/useTranslation";
 
@@ -10,7 +16,16 @@ const AboutSection: React.FC = () => {
   const text = t("about.text");
 
   return (
-    <AboutContainer id="about">
+    <AboutWrapper id="about">
+      <AboutDesktop title={title} text={text} />
+      <AboutMobile title={title} text={text} />
+    </AboutWrapper>
+  );
+};
+
+const AboutDesktop = ({ title, text }: any) => {
+  return (
+    <AboutContainerDesktop>
       <ImageSize>
         <Image src="/skater-girl.svg" alt="Alienigena no espaço" fill />
       </ImageSize>
@@ -20,7 +35,22 @@ const AboutSection: React.FC = () => {
         <p>{text}</p>
         <Button>Download CV</Button>
       </RightInfo>
-    </AboutContainer>
+    </AboutContainerDesktop>
+  );
+};
+
+const AboutMobile = ({ title, text }: any) => {
+  return (
+    <AboutContainerMobile>
+      <RightInfo>
+        <h2>{title}</h2>
+        <p>{text}</p>
+        <Button>Download CV</Button>
+      </RightInfo>
+      <ImageSize>
+        <Image src="/skater-girl.svg" alt="Alienigena no espaço" fill />
+      </ImageSize>
+    </AboutContainerMobile>
   );
 };
 
