@@ -75,11 +75,13 @@ export const RightInfo = styled.div`
 
     h2 {
       margin: 0 0;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      font-size: 48px;
     }
 
     p {
       text-align: center;
+      font-size: 14px;
     }
   }
 `;
@@ -95,7 +97,8 @@ export const ImageSize = styled.div`
   }
 
   @media (max-width: 800px) {
-    width: 280px;
-    height: 280px;
+    margin-top: 6px;
+    width: 180px;
+    height: 180px;
   }
 `;
