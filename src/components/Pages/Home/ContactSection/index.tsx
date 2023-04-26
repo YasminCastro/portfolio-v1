@@ -11,9 +11,10 @@ const ContactSection: React.FC = () => {
   return (
     <ContactContainer id="contact">
       <LeftInfo>
-        <p>{title}</p>
+        <h2>{title}</h2>
         <p className="contact">{subtitle}</p>
-        <SocialMedia showEmail={true} />
+        <p className="email">yasminsdcastro@gmail.com</p>
+        <SocialMedia />
       </LeftInfo>
 
       <ImageSize>

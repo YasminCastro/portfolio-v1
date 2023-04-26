@@ -9,8 +9,12 @@ export const ContactContainer = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  @media (max-width: 900px) {
-    justify-content: space-between;
+  @media (max-width: 700px) {
+    height: auto;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
 `;
 
@@ -18,7 +22,7 @@ export const LeftInfo = styled.div`
   width: 100%;
   max-width: 40%;
 
-  p {
+  h2 {
     font-size: 48px;
     font-weight: bold;
   }
@@ -30,8 +34,12 @@ export const LeftInfo = styled.div`
     margin-bottom: 20px;
   }
 
+  .email {
+    margin-bottom: 10px;
+  }
+
   @media (max-width: 1300px) {
-    p {
+    h2 {
       font-size: 38px;
     }
 
@@ -43,13 +51,17 @@ export const LeftInfo = styled.div`
   }
 
   @media (max-width: 900px) {
-    p {
+    h2 {
       font-size: 30px;
     }
 
     .contact {
       font-size: 16px;
     }
+  }
+
+  @media (max-width: 700px) {
+    max-width: 70%;
   }
 `;
 
