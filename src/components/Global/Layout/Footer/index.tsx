@@ -1,4 +1,4 @@
-import { FooterContainer, FooterWrapper } from "./styles";
+import { FooterContainer, FooterWrapper, RightSide } from "./styles";
 import SocialMedia from "../../SocialMedia";
 
 const Footer = () => {
@@ -6,7 +6,10 @@ const Footer = () => {
     <FooterWrapper>
       <FooterContainer>
         <p>Copyright © 2023 Yas Castro.</p>
-        <SocialMedia showEmail={true} />
+        <RightSide>
+          <p>yasminsdcastro@gmail.com</p>
+          <SocialMedia />
+        </RightSide>
       </FooterContainer>
     </FooterWrapper>
   );

@@ -16,9 +16,32 @@ export const FooterContainer = styled.div`
 
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 
   p {
     color: ${colors.gray700};
     font-size: 14px;
+  }
+  @media (max-width: 400px) {
+    p {
+      color: ${colors.gray700};
+      font-size: 10px;
+    }
+  }
+`;
+
+export const RightSide = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  p {
+    color: ${colors.white};
+  }
+
+  @media (max-width: 550px) {
+    p {
+      display: none;
+    }
   }
 `;
