@@ -30,7 +30,7 @@ const HomeSection: React.FC = () => {
         />
       </ImageSize>
       <ArrowDown>
-        <Link href="#about">
+        <Link href="#about" aria-label="Scroll">
           <MdOutlineKeyboardDoubleArrowDown size={30} />
         </Link>
       </ArrowDown>

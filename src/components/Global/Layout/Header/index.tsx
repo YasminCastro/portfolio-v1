@@ -60,7 +60,7 @@ const Header = () => {
           </PageLinks>
           <Icons>
             <SocialMedia />
-            <button onClick={changeToEn}>
+            <button aria-label="Traduzir" onClick={changeToEn}>
               <HiTranslate size={26} />
             </button>
           </Icons>
@@ -68,7 +68,7 @@ const Header = () => {
         <MobileWrapper>
           <Icons>
             <SocialMedia />
-            <button onClick={changeToEn}>
+            <button aria-label="Traduzir" onClick={changeToEn}>
               <HiTranslate size={26} />
             </button>
           </Icons>

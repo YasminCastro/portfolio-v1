@@ -21,12 +21,14 @@ const SocialMedia = ({ showEmail, showAvatar }: any) => {
       <a
         href="https://www.linkedin.com/in/yasmin-castro-b579451b8"
         target="_blank"
+        aria-label="Linkedin"
       >
         <FaLinkedin size={iconSizes} />
       </a>
       <a
         href="https://www.linkedin.com/in/yasmin-castro-b579451b8"
         target="_blank"
+        aria-label="Github"
       >
         <FaGithub size={iconSizes} />
       </a>
