@@ -65,7 +65,7 @@ export const SkillsTabs = styled.div`
 
   .mantine-Tabs-tab {
     :hover {
-      background: #e64980;
+      background: ${colors.gray800};
     }
   }
 

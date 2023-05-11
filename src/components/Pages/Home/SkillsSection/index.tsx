@@ -53,7 +53,7 @@ const SkillsMobile = ({ languages, database, others }: any) => {
       <SkillsTabs>
         <h2>Skills</h2>
 
-        <Tabs color="pink" variant="pills" defaultValue="languages">
+        <Tabs color="pink" defaultValue="languages">
           <Tabs.List position="center">
             <Tabs.Tab value="languages">{languages}</Tabs.Tab>
             <Tabs.Tab value="backend">Back End</Tabs.Tab>
@@ -149,12 +149,7 @@ const SkillsDesktop = ({ languages, database, others }: any) => {
       <SkillsTabs>
         <h2>Skills</h2>
 
-        <Tabs
-          orientation="vertical"
-          color="pink"
-          variant="pills"
-          defaultValue="languages"
-        >
+        <Tabs orientation="vertical" color="pink" defaultValue="languages">
           <Tabs.List>
             <Tabs.Tab value="languages">{languages}</Tabs.Tab>
             <Tabs.Tab value="backend">Back End</Tabs.Tab>
@@ -162,7 +157,6 @@ const SkillsDesktop = ({ languages, database, others }: any) => {
             <Tabs.Tab value="database">{database}</Tabs.Tab>
             <Tabs.Tab value="others">{others}</Tabs.Tab>
           </Tabs.List>
-          <hr />
 
           <Tabs.Panel value="languages" pl="xs">
             {skillsLanguages.map((element) => {
@@ -265,7 +259,7 @@ const Skill = ({ title, experience, progress, logo }: any) => {
           </p>
         </div>
       </SkillInfo>
-      <Progress color="pink" value={progress} />
+      <Progress aria-label="Skill progress" color="pink" value={progress} />
     </SkillContainer>
   );
 };
