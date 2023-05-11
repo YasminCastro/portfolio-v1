@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ImageSize, ProjectsContainer } from "./styles";
-import { Button } from "@/components/Global";
+import { ButtonA } from "@/components/Global";
 import { Carousel } from "@mantine/carousel";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -35,9 +35,9 @@ const ProjectsSection: React.FC = () => {
           </ImageSize>
         </Carousel.Slide>
       </Carousel>
-      <Button href="https://github.com/YasminCastro" target="_blank">
+      <ButtonA href="https://github.com/YasminCastro" target="_blank">
         {github}
-      </Button>
+      </ButtonA>
     </ProjectsContainer>
   );
 };

@@ -1,3 +1,4 @@
+import { colors } from "@/styles/GlobalStyles";
 import styled, { keyframes } from "styled-components";
 
 export const HomeContainer = styled.div`
@@ -31,6 +32,22 @@ export const LeftInfo = styled.div`
 
   a {
     margin-top: 24px;
+  }
+
+  .contact-button {
+    display: flex;
+    justify-content: center;
+    background: ${colors.white};
+    color: ${colors.black};
+
+    padding: 14px 38px;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 16px;
+
+    width: fit-content;
+
+    cursor: pointer;
   }
 
   @media (max-width: 1300px) {

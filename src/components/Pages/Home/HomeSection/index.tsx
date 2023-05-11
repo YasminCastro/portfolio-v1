@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ArrowDown, HomeContainer, ImageSize, LeftInfo } from "./styles";
-import { Button } from "@/components/Global";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
@@ -19,7 +18,9 @@ const HomeSection: React.FC = () => {
         <h1>
           {iAm} Yasmin, <br /> {developer}
         </h1>
-        <Button href="#contact">{contact}</Button>
+        <Link href="#contact" className="contact-button">
+          {contact}
+        </Link>
       </LeftInfo>
       <ImageSize>
         <Image
