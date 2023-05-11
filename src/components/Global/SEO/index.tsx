@@ -24,7 +24,8 @@ const SEO = ({ title, description }: ISEO): JSX.Element => {
       <meta name="keywords" content={seo.keywords} />
       <meta name="author" content="YasCastro" />
       <meta name="image" content={seo.image} />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="theme-color" content="#000000" />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={seo.url} />
