@@ -1,3 +1,3 @@
 const nextTranslate = require("next-translate-plugin");
 
-module.exports = nextTranslate({ styledComponents: true });
+module.exports = nextTranslate({ compiler: { styledComponents: true } });
