@@ -1,15 +1,23 @@
+import { Avatar } from "@mantine/core";
 import { SocialMediaWrapper } from "./styles";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
-const SocialMedia = ({ showEmail }: any) => {
+const SocialMedia = ({ showEmail, showAvatar }: any) => {
   const iconSizes = 26;
   return (
     <SocialMediaWrapper>
-      {showEmail && "yasminsdcastro@gmail.com"}
+      {showAvatar && (
+        <a href="mailto:yasminsdcastro@gmail.com" target="_blank">
+          <Avatar src="avatar.jpg" alt="it's me" radius="xl" />
+        </a>
+      )}
+
+      {/* {showEmail && "yasminsdcastro@gmail.com"}
       <a href="mailto:yasminsdcastro@gmail.com" target="_blank">
         <HiOutlineMail size={iconSizes} />
-      </a>
+      </a> */}
+
       <a
         href="https://www.linkedin.com/in/yasmin-castro-b579451b8"
         target="_blank"

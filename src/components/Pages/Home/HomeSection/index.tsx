@@ -22,7 +22,12 @@ const HomeSection: React.FC = () => {
         <Button href="#contact">{contact}</Button>
       </LeftInfo>
       <ImageSize>
-        <Image src="/outer-space.svg" alt="Alienigena no espaço" fill />
+        <Image
+          src="/outer-space.svg"
+          alt="Alienigena no espaço"
+          fill
+          priority
+        />
       </ImageSize>
       <ArrowDown>
         <Link href="#about">

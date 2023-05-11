@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ContactContainer, ImageSize, LeftInfo } from "./styles";
 import SocialMedia from "@/components/Global/SocialMedia";
 import useTranslation from "next-translate/useTranslation";
+import { Avatar } from "@mantine/core";
 
 const ContactSection: React.FC = () => {
   const { t } = useTranslation("common");
@@ -14,7 +15,7 @@ const ContactSection: React.FC = () => {
         <h2>{title}</h2>
         <p className="contact">{subtitle}</p>
         <p className="email">yasminsdcastro@gmail.com</p>
-        <SocialMedia />
+        <SocialMedia showAvatar={true} />
       </LeftInfo>
 
       <ImageSize>

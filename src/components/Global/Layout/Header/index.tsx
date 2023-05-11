@@ -54,9 +54,9 @@ const Header = () => {
             <Link href="#skills">
               <p>Skills</p>
             </Link>
-            <Link href="#projects">
+            {/* <Link href="#projects">
               <p>{projects}</p>
-            </Link>
+            </Link> */}
           </PageLinks>
           <Icons>
             <SocialMedia />
