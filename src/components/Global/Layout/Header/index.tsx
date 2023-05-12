@@ -22,6 +22,7 @@ const Header = () => {
   const home = t("header.home");
   const about = t("header.about");
   const projects = t("header.projects");
+  const contact = t("header.contact");
 
   useEffect(() => {
     if (router.locale === "en") {
@@ -57,6 +58,9 @@ const Header = () => {
             {/* <Link href="#projects">
               <p>{projects}</p>
             </Link> */}
+            <Link href="#contact">
+              <p>{contact}</p>
+            </Link>
           </PageLinks>
           <Icons>
             <SocialMedia />

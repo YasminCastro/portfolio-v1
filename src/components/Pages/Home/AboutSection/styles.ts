@@ -52,7 +52,7 @@ export const RightInfo = styled.div`
     text-align: right;
   }
 
-  a {
+  button {
     margin-top: 24px;
   }
 
