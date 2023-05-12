@@ -137,7 +137,11 @@ const SkillsMobile = ({ languages, database, others }: any) => {
         </Tabs>
       </SkillsTabs>
       <ImageSize>
-        <Image src="/Creator.gif" alt="Alienigena no espaço" fill />
+        <Image
+          src="/Creator.gif"
+          alt="Garota com um computador programando"
+          fill
+        />
       </ImageSize>
     </SkillsContainerMobile>
   );
@@ -232,7 +236,11 @@ const SkillsDesktop = ({ languages, database, others }: any) => {
         </Tabs>
       </SkillsTabs>
       <ImageSize>
-        <Image src="/Creator.gif" alt="Alienigena no espaço" fill />
+        <Image
+          src="/Creator.gif"
+          alt="Garota com um computador programando"
+          fill
+        />
       </ImageSize>
     </SkillsContainerDesktop>
   );

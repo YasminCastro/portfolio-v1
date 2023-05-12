@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ContactContainer, ImageSize, LeftInfo } from "./styles";
 import SocialMedia from "@/components/Global/SocialMedia";
 import useTranslation from "next-translate/useTranslation";
-import { Avatar } from "@mantine/core";
 
 const ContactSection: React.FC = () => {
   const { t } = useTranslation("common");
@@ -19,7 +18,11 @@ const ContactSection: React.FC = () => {
       </LeftInfo>
 
       <ImageSize>
-        <Image src="/green-code-girl.svg" alt="Alienigena no espaço" fill />
+        <Image
+          src="/green-code-girl.svg"
+          alt="Garota com um computador pensando em inovações."
+          fill
+        />
       </ImageSize>
     </ContactContainer>
   );
