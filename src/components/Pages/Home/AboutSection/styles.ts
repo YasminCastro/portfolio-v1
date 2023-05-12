@@ -97,8 +97,8 @@ export const ImageSize = styled.div`
   }
 
   @media (max-width: 800px) {
-    margin-top: 6px;
-    width: 180px;
-    height: 180px;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
   }
 `;
