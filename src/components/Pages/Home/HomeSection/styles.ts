@@ -103,8 +103,8 @@ export const ArrowDown = styled.div`
 `;
 
 export const ImageSize = styled.div`
-  width: 550px;
-  height: 350px;
+  width: 500px;
+  height: 500px;
   position: relative;
 
   @media (max-width: 700px) {

@@ -41,7 +41,7 @@ const AboutDesktop = ({ title, text, lang }: any) => {
   return (
     <AboutContainerDesktop>
       <ImageSize>
-        <Image src="/skater-girl.svg" alt="Alienigena no espaço" fill />
+        <Image src="/skater-girl.svg" alt="Garota andando de skate" fill />
       </ImageSize>
 
       <RightInfo>
@@ -74,7 +74,7 @@ const AboutMobile = ({ title, text, lang }: any) => {
         </Button>
       </RightInfo>
       <ImageSize>
-        <Image src="/skater-girl.svg" alt="Alienigena no espaço" fill />
+        <Image src="/skater-girl.svg" alt="Garota andando de skate" fill />
       </ImageSize>
     </AboutContainerMobile>
   );

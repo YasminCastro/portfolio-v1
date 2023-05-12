@@ -114,8 +114,8 @@ export const SkillInfo = styled.div`
 `;
 
 export const ImageSize = styled.div`
-  width: 650px;
-  height: 550px;
+  width: 600px;
+  height: 450px;
   position: relative;
 
   @media (max-width: 1200px) {

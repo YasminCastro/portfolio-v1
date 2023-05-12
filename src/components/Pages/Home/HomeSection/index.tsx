@@ -24,8 +24,8 @@ const HomeSection: React.FC = () => {
       </LeftInfo>
       <ImageSize>
         <Image
-          src="/outer-space.svg"
-          alt="Alienigena no espaço"
+          src="/Firmware.gif"
+          alt="Desenho de um computador."
           fill
           priority
         />
