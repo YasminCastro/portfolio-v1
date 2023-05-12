@@ -35,8 +35,8 @@ export default class _Document extends Document {
         <Head>
           <link rel="shortcut icon" href="/fire-ball.svg" />
           <link rel="icon" href="/fire-ball.svg" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com" />
+          <link href="https://fonts.gstatic.com" />
         </Head>
         <body>
           <Main />
