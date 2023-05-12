@@ -9,7 +9,7 @@ const SEO = ({ title, description }: ISEO): JSX.Element => {
   const seo = {
     title: title || "Yas",
     description: description || `Venha conhecer a Yas`,
-    image: `Code.png`,
+    image: `/Code.png`,
     keywords: "",
     url: "",
   };
